@@ -1,0 +1,68 @@
+h1 {
+    font-family: "Brush Script MT", Cursive;
+    font-style: oblique;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+body {
+    background-color: #000000;
+    align: center;
+    text-align: center;
+    color: #FFFFFF; 
+
+}
+
+ol,li {
+    font-family: 'Times New Roman', serif;
+    font-style: oblique;
+    border-style: groove;
+    border-width: 2px;
+    border-color: #b4b4b4;
+    border-radius: 5px;
+    align: center;
+    text-align: center;
+    margin:5px;
+    width: 95%;
+}
+
+ol {
+    margin: 10px;
+    width:auto; 
+    align: center;
+}
+
+
+.submit, a:link, a:visited {
+  background-color: #b0b0b0;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  margin: 10px;
+  border: 0px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.submit:hover, .submit:active, a:hover, a:active {
+  background-color: #0000FF;
+}
+
+input {
+    font-family: 'Times New Roman', serif;
+}
+
+
+.error {
+   color: #FF0000; 
+}
+
+.note {
+  color: #b0b0b0;
+}
+
+
+#main_dev {
+    width: 300px;
+}

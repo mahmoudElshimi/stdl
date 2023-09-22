@@ -1,0 +1,14 @@
+{% extends "main/layout.html" %}
+
+{% block body %}
+    <form action="{% url 'main:del' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Delete" class="submit"> 
+    </form>
+    <a href="{% url 'main:index' %}"> Cancel </a>
+    {% if  error  %}
+        <p class="error" style="padding:0px;"> {{ error }} is not in ur items </p>
+    {% endif %}
+    <h6 class="note"> For clearing the whole lilst enter: 0 </h6>
+{% endblock %}

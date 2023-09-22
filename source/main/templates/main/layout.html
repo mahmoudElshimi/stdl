@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang=en>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+            
+
+        <title> STDL </title>
+        <link href="{% static 'main/styles.css' %}" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <dev id="main_dev">
+        {% block body %}
+        {% endblock %}
+        </dev>
+    </body>
+
+</html>
