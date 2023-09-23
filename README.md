@@ -14,12 +14,12 @@ About
 
 Requirements
 ------------
-- Python >= 3.11
+- Python >= 3.11.5
 - Django >= 4.2.5
 
 Installation
 ------------
-Install [Python](https://www.python.org/downloads/)
+Install [Python](https://www.python.org/downloads/),
 Then install [Django](https://www.djangoproject.com/download/):
 ```
 $ pip install -U Django>=4.2.5
@@ -28,7 +28,8 @@ Running
 -------
 ```
 $ git clone https://github.com/mahmoudElshimi/stdl.git
-$ cd source
+$ cd stdl/source
+$ python manage.py migrate
 $ python manage.py runserver
 ```
 Then open "http://127.0.0.1:8000" in ur browser. 
