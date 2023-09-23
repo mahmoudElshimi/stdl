@@ -1,9 +1,12 @@
 # STDL:
 Simple To-Do List Web Application Using Django.
 
+![Screenshot of stdl's main page](screenshots/1.png) ![Screenshot of stdl's main page](screenshots/2.png)
+
+
 About
 -------------------
-- A session based application for creating simple to-do list.
+- A session-based web application for creating simple to-do list.
 - 'Session' means it saves your list for browser's session.
 - JavaScript free!
 - It's for educational purpose.
@@ -16,15 +19,16 @@ Requirements
 
 Installation
 ------------
-Install [Django](https://www.djangoproject.com/download/):
+Install [Python](https://www.python.org/downloads/)
+Then install [Django](https://www.djangoproject.com/download/):
 ```
-   $ pip install -U Django>=4.2.5
+$ pip install -U Django>=4.2.5
 ```
 Running
 -------
 ```
+$ git clone https://github.com/mahmoudElshimi/stdl.git
 $ cd source
 $ python manage.py runserver
-$ firefox "http://127.0.0.1:8000"
 ```
-
+Then open "http://127.0.0.1:8000" in ur browser. 
