@@ -3,6 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
+from .models import Items
+
 
 class NewItem(forms.Form):
     item = forms.CharField(label="New Item")
@@ -13,14 +15,12 @@ class DelItem(forms.Form):
 
 
 def index(request, name: str = ""):
-    if "items" not in request.session:
-        request.session["items"] = []
-
+    all_items =  [i[1] for i in Items.objects.values_list()]
     return render(
         request,
         "main/index.html",
         {
-            "items": request.session["items"],
+            "items": all_items,
         },
     )
 
@@ -30,8 +30,8 @@ def new_item(request):
     if request.method == "POST":
         form = NewItem(request.POST)
         form.is_valid()
-        item = form.cleaned_data["item"]
-        request.session["items"] += [item]
+        item = Items(item=form.cleaned_data["item"])
+        item.save()
         return HttpResponseRedirect(reverse("main:index"))
 
     return render(
@@ -44,17 +44,20 @@ def new_item(request):
 
 
 def del_item(request):
+    all_items =  [i for i in Items.objects.values_list()]
     """Add a new item to items list"""
     if request.method == "POST":
         form = DelItem(request.POST)
         form.is_valid()
         item = form.cleaned_data["item"]
-        request.session.modified = True
-        items = request.session["items"]
+
         if item == 0:
-            del request.session["items"]
-        elif 0 < item <= len(items):
-            items.pop(int(item - 1))
+            Items.objects.all().delete()
+
+        elif 0 < item <= len(all_items):
+            item -= 1
+            Items.objects.get(id=all_items[item][0]).delete()
+
         else:
             return render(
                 request,
