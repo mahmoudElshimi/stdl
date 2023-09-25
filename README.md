@@ -5,13 +5,18 @@ Simple To-Do List Web Application Using Django.
 
 
 About
--------------------
+-----
 - A session-based web application for creating simple to-do list.
 - 'Session' means it saves your list for browser's session.
 - JavaScript free!
 - It's for educational purpose.
 - Feel free to contribute.
 
+To Do
+-----
+- Use database instead of being session-based.
+- Add support for multi-user and authentication.
+  
 Requirements
 ------------
 - Python >= 3.11.5
