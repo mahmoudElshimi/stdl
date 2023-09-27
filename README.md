@@ -6,16 +6,16 @@ Simple To-Do List Web Application Using Django.
 
 About
 -----
-- Web application for creating a simple to-do list.
-- It uses SQLite.b
-- JavaScript free!
+- Web application for creating a simple To-Do list.
+- It uses SQLite.
 - It's for educational purpose.
+- JavaScript free!
 - Feel free to contribute.
 
 To Do
 -----
 - ~~Use database instead of being a session-based.~~&emsp;&emsp;#Done as per commit 09b48f8.
-- Add support for multi-user and authentication.
+- Adding support for multi-user and authentication.
   
 Requirements
 ------------
@@ -33,8 +33,8 @@ Running
 -------
 ```
 $ git clone https://github.com/mahmoudElshimi/stdl.git
-$ cd stdl/source
+$ cd stdl/src
 $ python manage.py migrate
 $ python manage.py runserver
 ```
-Then open "http://127.0.0.1:8000" in ur browser. 
+Then open "http://127.0.0.1:8000" in your browser. 
