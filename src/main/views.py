@@ -1,5 +1,5 @@
 from django import forms
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -15,7 +15,8 @@ class DelItem(forms.Form):
 
 
 def index(request, name: str = ""):
-    all_items =  [i[1] for i in Items.objects.values_list()]
+    """Print All Items"""
+    all_items = [i[1] for i in Items.objects.values_list()]
     return render(
         request,
         "main/index.html",
@@ -26,7 +27,11 @@ def index(request, name: str = ""):
 
 
 def new_item(request):
-    """Add a new item to items list"""
+    """If method is post:
+        Extract The Item From The HttpResponse && Create A New One.
+    else:
+        View The Form For Creating A New Item.
+    """
     if request.method == "POST":
         form = NewItem(request.POST)
         form.is_valid()
@@ -44,8 +49,13 @@ def new_item(request):
 
 
 def del_item(request):
-    all_items =  [i for i in Items.objects.values_list()]
-    """Add a new item to items list"""
+    """If method is post:
+        Extract The Item's Num From The HttpResponse && Get Its Id Then Delete
+        Its Object && If Num==0: Delete All Objects.
+    else:
+        View The Form For Deleting An Item.
+    """
+    all_items = Items.objects.values_list()
     if request.method == "POST":
         form = DelItem(request.POST)
         form.is_valid()
@@ -55,6 +65,7 @@ def del_item(request):
             Items.objects.all().delete()
 
         elif 0 < item <= len(all_items):
+            """ Check For Boundaries. """
             item -= 1
             Items.objects.get(id=all_items[item][0]).delete()
 
