@@ -14,7 +14,7 @@ About
 
 To Do
 -----
-- ~~Use database instead of being a session-based.~~&emsp;&emsp;#Done as per commit 09b48f8.
+- ~~Use database instead of being a session-based.~~&emsp;&emsp;# Done as per commit 09b48f8.
 - Adding support for multi-user and authentication.
   
 Requirements
