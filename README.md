@@ -27,7 +27,7 @@ Installation
 Install [Python](https://www.python.org/downloads/),
 Then install [Django](https://www.djangoproject.com/download/):
 ```
-$ pip install -U Django>=4.2.5
+$ pip3 install -U Django>=4.2.5
 ```
 Running
 -------
