@@ -3,6 +3,7 @@ h1 {
     font-style: oblique;
     font-weight: lighter;
     font-size: 30px;
+    color: #1177AA;
 }
 
 body {
@@ -18,7 +19,7 @@ ol,li {
     font-style: oblique;
     border-style: groove;
     border-width: 2px;
-    border-color: #b4b4b4;
+    border-color: #1177AA;
     border-radius: 5px;
     align: center;
     text-align: center;
@@ -34,7 +35,7 @@ ol {
 
 
 .submit, a:link, a:visited {
-  background-color: #b0b0b0;
+  background-color: #005577;
   color: #FFFFFF;
   padding: 5px 10px;
   margin: 10px;
@@ -46,7 +47,7 @@ ol {
 }
 
 .submit:hover, .submit:active, a:hover, a:active {
-  background-color: #0000FF;
+  background-color: #1177AA;
 }
 
 input {
