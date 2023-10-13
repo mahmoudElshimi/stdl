@@ -1,7 +1,7 @@
 STDL - Simple To-Do List Web Application Using Django.
 ======================================================
 
-![Screenshot of stdl's main page](screenshots/1.png) ![Screenshot of stdl's main page](screenshots/2.png)
+![Screenshot of stdl's main page](screenshots/1.png) ![Screenshot of stdl's main page](screenshots/2.png) ![Screenshot of stdl's main page](screenshots/3.png)
 
 
 About
