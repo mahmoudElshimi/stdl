@@ -38,3 +38,11 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 Then open "http://127.0.0.1:8000" in your browser. 
+
+Testing
+-------
+If you are on server and want to test it without GUI, you can run:
+```
+$ cd stdl/src
+$ python net_cat.py
+```

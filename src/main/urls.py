@@ -9,5 +9,6 @@ urlpatterns = [
         path("", views.index, name="index"),
         path("new/", views.new_item, name="new"),
         path("del/", views.del_item, name="del"),
+        path("test/", views.test, name="test"),
         path("<str:name>", views.index, name="index"),
 ]

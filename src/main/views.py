@@ -1,5 +1,5 @@
 from django import forms
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -88,3 +88,8 @@ def del_item(request):
             "form": DelItem,
         },
     )
+
+
+
+def test(request, name: str = ""):
+    return HttpResponse("Django Is Running OK!")
