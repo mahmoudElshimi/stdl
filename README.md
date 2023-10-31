@@ -41,7 +41,7 @@ Then open "http://127.0.0.1:8000" in your browser.
 
 Testing
 -------
-If you are on server and want to test it without GUI, you can run:
+If you are on server and want to test it without GUI, you can use `socket` by running:
 ```
 $ cd stdl/src
 $ python net_cat.py
